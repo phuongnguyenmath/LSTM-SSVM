@@ -15,7 +15,7 @@ def load_data(path, verbose=True):
 
 def word_embeddings(path_glove):
     embeddings_index = {}
-    f = open(path_glove + '/glove.6B.300d.txt', encoding="utf8")
+    f = open(path_glove + 'glove.6B.300d.txt', encoding="utf8")
     for line in f:
         values = line.split()
         word = values[0]
@@ -43,9 +43,9 @@ def sen2vec(sentence):
     return np.average(M,axis=0)
 
 
-path_data = ".../data"
-path_glove = ".../embedding"
-swda_data = load_data(path_data+'/swda.pkl')
+path_data = "../data/"
+path_glove = "../embedding/"
+swda_data = load_data(path_data+'swda.pkl')
 
 embeddings_index = word_embeddings(path_glove)
 
